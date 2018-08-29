@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8"
+          fx:controller="mt.logistics.tensorflow.usecase.AppController">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <Button layoutX="384.0" layoutY="272.0" mnemonicParsing="false" onAction="#switchScreenToTrainModel"
+                        prefHeight="96.0" prefWidth="125.0" text="OK">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="133.0" layoutY="272.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="125.0"
+                        text="Abbrechen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <TextArea layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" text="start"/>
+            </children>
+        </Pane>
+    </children>
+</GridPane>
