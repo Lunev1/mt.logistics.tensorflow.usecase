@@ -29,7 +29,7 @@ public class AppController implements Initializable {
 
     public void switchScreenToStart(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/start.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/tut.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);

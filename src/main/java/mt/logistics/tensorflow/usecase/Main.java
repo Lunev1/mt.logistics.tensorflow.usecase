@@ -14,9 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent window = FXMLLoader.load(getClass().getResource("/start.fxml"));
+        Parent window = FXMLLoader.load(getClass().getResource("/home.fxml"));
         primaryStage.setTitle("mt.tensorflow.prototype");
-        primaryStage.setScene(new Scene(window, 600, 400));
+        primaryStage.setScene(new Scene(window, 1024, 768));
         primaryStage.show();
     }
 }
