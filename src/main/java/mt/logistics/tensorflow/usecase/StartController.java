@@ -26,4 +26,31 @@ public class StartController implements Initializable {
         window.setScene(tableViewScene);
         window.show();
     }
+
+    public void switchScreenToLearn(ActionEvent event) throws IOException
+    {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(tableViewScene);
+        window.show();
+    }
+
+    public void switchScreenToReport(ActionEvent event) throws IOException
+    {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(tableViewScene);
+        window.show();
+    }
+
+    public void switchScreenToSettings(ActionEvent event) throws IOException
+    {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(tableViewScene);
+        window.show();
+    }
 }

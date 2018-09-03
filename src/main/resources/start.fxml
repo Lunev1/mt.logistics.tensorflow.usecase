@@ -46,7 +46,8 @@
                 <HBox layoutY="415.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="415.0">
                     <children>
-                        <JFXButton prefHeight="71.0" prefWidth="312.0" text="MODELL ANLERNEN" textFill="#d1d1e0">
+                        <JFXButton onAction="#switchScreenToLearn" prefHeight="71.0" prefWidth="312.0"
+                                   text="MODELL ANLERNEN" textFill="#d1d1e0">
                             <font>
                                 <Font name="System Bold" size="18.0"/>
                             </font>
@@ -59,7 +60,8 @@
                 <HBox layoutY="485.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="485.0">
                     <children>
-                        <JFXButton prefHeight="71.0" prefWidth="312.0" text="BERICHTE" textFill="#d1d1e0">
+                        <JFXButton onAction="#switchScreenToReport" prefHeight="71.0" prefWidth="312.0" text="BERICHTE"
+                                   textFill="#d1d1e0">
                             <font>
                                 <Font name="System Bold" size="18.0"/>
                             </font>
@@ -72,7 +74,8 @@
                 <HBox layoutY="555.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="555.0">
                     <children>
-                        <JFXButton prefHeight="71.0" prefWidth="312.0" text="EINSTELLUNGEN" textFill="#d1d1e0">
+                        <JFXButton onAction="#switchScreenToSettings" prefHeight="71.0" prefWidth="312.0"
+                                   text="EINSTELLUNGEN" textFill="#d1d1e0">
                             <font>
                                 <Font name="System Bold" size="18.0"/>
                             </font>
