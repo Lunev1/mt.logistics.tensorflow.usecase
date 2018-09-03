@@ -1,4 +1,4 @@
-package mt.logistics.tensorflow.usecase;
+package mt.logistics.tensorflow.usecase.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class AnalyseController {
 
     public void switchScreenToStart(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/start.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/views/start.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);

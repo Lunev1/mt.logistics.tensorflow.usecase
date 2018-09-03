@@ -19,22 +19,22 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
-            fx:controller="mt.logistics.tensorflow.usecase.ReportController">
+            fx:controller="mt.logistics.tensorflow.usecase.controllers.LearnController">
     <children>
         <Pane prefHeight="139.0" prefWidth="1024.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0"
               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Label layoutX="73.0" layoutY="30.0" text="Berichte" textFill="WHITE">
+                <Label layoutX="73.0" layoutY="30.0" text="Modell anlernen" textFill="WHITE">
                     <font>
                         <Font size="48.0"/>
                     </font>
                 </Label>
-                <Label layoutX="79.0" layoutY="91.0" text="1" textFill="WHITE">
+                <Label layoutX="79.0" layoutY="91.0" text="Erstellen eines Tensorflow Modells" textFill="WHITE">
                     <font>
                         <Font size="13.0"/>
                     </font>
                 </Label>
-                <Button layoutX="912.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchScreenToStart"
+                <Button layoutX="915.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchScreenToStart"
                         text="Zum Start zurück"/>
             </children>
         </Pane>

@@ -1,10 +1,10 @@
-package mt.logistics.tensorflow.usecase;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.InputStream;
 
 public class Main extends Application {
 
@@ -14,7 +14,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent window = FXMLLoader.load(getClass().getResource("/start.fxml"));
+        //InputStream input = getClass().getResourceAsStream("/views/start.fxml");
+        //System.out.println(input);
+
+        Parent window = FXMLLoader.load(getClass().getResource("/views/start.fxml"));
         primaryStage.setTitle("mt.tensorflow.prototype");
         primaryStage.setScene(new Scene(window, 1024, 768));
         //primaryStage.setResizable(false);

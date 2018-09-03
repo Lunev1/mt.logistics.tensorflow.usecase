@@ -1,4 +1,4 @@
-package mt.logistics.tensorflow.usecase;
+package mt.logistics.tensorflow.usecase.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +20,7 @@ public class StartController implements Initializable {
 
     public void switchScreenToAnalyse(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/views/analyse.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
@@ -29,7 +29,7 @@ public class StartController implements Initializable {
 
     public void switchScreenToLearn(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/views/learn.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
@@ -38,7 +38,7 @@ public class StartController implements Initializable {
 
     public void switchScreenToReport(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/views/report.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
@@ -47,7 +47,7 @@ public class StartController implements Initializable {
 
     public void switchScreenToSettings(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/analyse.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("/views/settings.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
