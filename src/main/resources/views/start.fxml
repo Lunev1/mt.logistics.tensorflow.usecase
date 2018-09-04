@@ -9,18 +9,19 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
-            fx:controller="mt.logistics.tensorflow.usecase.controllers.StartController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="mt.logistics.tensorflow.usecase.controllers.MainController">
     <children>
         <AnchorPane prefHeight="768.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="424.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Text fill="#d1d1e0" layoutX="14.0" layoutY="748.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                <Text layoutX="14.0" layoutY="748.0" strokeType="OUTSIDE" strokeWidth="0.0"
                       text="Tensorflow Use Case Prototype" wrappingWidth="311.0" AnchorPane.bottomAnchor="15.984375"
                       AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="730.734375">
                     <font>
-                        <Font size="16.0"/>
+                        <Font name="System Bold" size="19.0"/>
                     </font>
                 </Text>
             </children>
@@ -32,57 +33,45 @@
                 <HBox layoutY="345.0" prefHeight="70.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="345.0">
                     <children>
-                        <JFXButton onAction="#switchScreenToAnalyse" prefHeight="71.0" prefWidth="312.0"
-                                   text="VIDEO ANALYSIEREN" textFill="#d1d1e0">
+                        <Button fx:id="btnAnalyse" mnemonicParsing="false" onAction="#handleButtonAction"
+                                text="Video analysieren">
                             <font>
-                                <Font name="System Bold" size="18.0"/>
+                                <Font name="System Bold" size="28.0"/>
                             </font>
-                            <HBox.margin>
-                                <Insets/>
-                            </HBox.margin>
-                        </JFXButton>
+                        </Button>
                     </children>
                 </HBox>
                 <HBox layoutY="415.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="415.0">
                     <children>
-                        <JFXButton onAction="#switchScreenToLearn" prefHeight="71.0" prefWidth="312.0"
-                                   text="MODELL ANLERNEN" textFill="#d1d1e0">
+                        <Button fx:id="btnLearn" mnemonicParsing="false" onAction="#handleButtonAction"
+                                text="Modell anlernen">
                             <font>
-                                <Font name="System Bold" size="18.0"/>
+                                <Font name="System Bold" size="28.0"/>
                             </font>
-                            <HBox.margin>
-                                <Insets/>
-                            </HBox.margin>
-                        </JFXButton>
+                        </Button>
                     </children>
                 </HBox>
                 <HBox layoutY="485.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="485.0">
                     <children>
-                        <JFXButton onAction="#switchScreenToReport" prefHeight="71.0" prefWidth="312.0" text="BERICHTE"
-                                   textFill="#d1d1e0">
+                        <Button fx:id="btnReport" mnemonicParsing="false" onAction="#handleButtonAction"
+                                text="Berichte">
                             <font>
-                                <Font name="System Bold" size="18.0"/>
+                                <Font name="System Bold" size="28.0"/>
                             </font>
-                            <HBox.margin>
-                                <Insets/>
-                            </HBox.margin>
-                        </JFXButton>
+                        </Button>
                     </children>
                 </HBox>
                 <HBox layoutY="555.0" prefHeight="71.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0"
                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="555.0">
                     <children>
-                        <JFXButton onAction="#switchScreenToSettings" prefHeight="71.0" prefWidth="312.0"
-                                   text="EINSTELLUNGEN" textFill="#d1d1e0">
+                        <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleButtonAction"
+                                text="Einstellungen">
                             <font>
-                                <Font name="System Bold" size="18.0"/>
+                                <Font name="System Bold" size="28.0"/>
                             </font>
-                            <HBox.margin>
-                                <Insets/>
-                            </HBox.margin>
-                        </JFXButton>
+                        </Button>
                     </children>
                 </HBox>
             </children>

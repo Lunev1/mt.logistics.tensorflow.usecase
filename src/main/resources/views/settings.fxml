@@ -148,7 +148,7 @@
                 </GridPane>
             </items>
         </SplitPane>
-        <Button layoutX="912.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchScreenToStart"
+        <Button fx:id="btnStart" layoutX="912.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleButtonAction"
                 text="Zum Start zurück"/>
     </children>
 </AnchorPane>
