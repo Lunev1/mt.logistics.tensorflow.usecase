@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mt.logistics.tensorflow.usecase:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/mt_logistics_tensorflow_usecase_jar</output-path>
+    <root id="archive" name="mt.logistics.tensorflow.usecase.jar">
+      <element id="module-output" name="mt.logistics.tensorflow.usecase" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/tensorflow/libtensorflow_jni_gpu/1.10.0/libtensorflow_jni_gpu-1.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/tensorflow/libtensorflow_jni/1.10.0/libtensorflow_jni-1.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/tensorflow/libtensorflow/1.10.0/libtensorflow-1.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/tensorflow/tensorflow/1.10.0/tensorflow-1.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/8.0.4/jfoenix-8.0.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

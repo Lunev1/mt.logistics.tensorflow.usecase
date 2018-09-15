@@ -12,7 +12,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.1" level="project" />
-    <orderEntry type="library" name="Maven: org.tensorflow:tensorflow:1.10.1" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:tensorflow:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow_jni:1.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow_jni_gpu:1.10.0" level="project" />
     <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.4" level="project" />
   </component>
 </module>

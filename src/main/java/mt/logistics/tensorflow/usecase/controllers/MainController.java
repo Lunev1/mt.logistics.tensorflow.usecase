@@ -30,7 +30,7 @@ public class MainController implements Initializable {
 
     }
 
-    // handles all actions between stages, is parent of every other controller
+    // handles all actions between stages
     public void handleButtonAction(ActionEvent event) throws IOException
     {
         Stage stage;
