@@ -20,7 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mt.logistics.tensorflow.usecase" target="1.5" />
+      <module name="mt.logistics.tensorflow.usecase" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

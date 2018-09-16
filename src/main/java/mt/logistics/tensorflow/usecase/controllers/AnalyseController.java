@@ -1,7 +1,5 @@
 package mt.logistics.tensorflow.usecase.controllers;
 
-import com.jfoenix.controls.JFXListView;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,53 +9,59 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import mt.logistics.tensorflow.usecase.models.StorageItem;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class AnalyseController extends MainController {
     @FXML
     private TableView<StorageItem> tableView;
+    private Integer tableViewIDCount = 0;
     @FXML
-    private TableColumn<StorageItem, Integer> idColumn;
-    //@FXML private TableColumn<StorageItem, String> itemColumn;
-    //@FXML private TableColumn<StorageItem, Integer> amountColumn;
-    //@FXML private TableColumn<StorageItem, Date> dateColumn;
-
+    private TableColumn<StorageItem, Integer> idCol;
     @FXML
-    private JFXListView listView;
+    private TableColumn<StorageItem, String> itemCol;
+    @FXML
+    private TableColumn<StorageItem, Integer> amountCol;
+    @FXML
+    private TableColumn<StorageItem, SimpleDateFormat> dateCol;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        itemCol.setCellValueFactory(new PropertyValueFactory<>("item"));
+        amountCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        idColumn.setCellValueFactory(new PropertyValueFactory<StorageItem, Integer>("ID"));
-        //itemColumn.setCellValueFactory(new PropertyValueFactory<StorageItem, String>("Lagermittel"));
-        //amountColumn.setCellValueFactory(new PropertyValueFactory<StorageItem, Integer>("Anzahl"));
-        //dateColumn.setCellValueFactory(new PropertyValueFactory<StorageItem, Date>("Zeit"));
-
-        //newStorageItem();
-        //tableView.getItems().add(1,new StorageItem(1,"ContainerB",2,new Date()));
-        //System.out.println(new StorageItem(1,"ContainerA", 1, new Date()));
-
-        /*ObservableList<StorageItem> items = FXCollections.observableArrayList(
-                new StorageItem()
-        );*/
-        //tableView.setItems(items);
-        //getTestData();
-
+        addTableList("Fässer", 5, getTimestamp());
+        addTableList("Container", 2, getTimestamp());
+        addTableList("Paletten", 5, getTimestamp());
     }
 
-    public void newStorageItem() {
-        StorageItem storageItem = new StorageItem(1);
-        tableView.getItems().add(storageItem);
+    private void addTableList(String item, Integer amount, String date) {
+        StorageItem addItem = new StorageItem(getNewTableViewID(), item, amount, date);
+        tableView.getItems().add(addItem);
     }
 
-    public void getTestData() {
-        ObservableList<StorageItem> items = FXCollections.observableArrayList(
-                new StorageItem(1)
-        );
-
-        //items.add(new StorageItem(1,"ContainerA",1,new Date()));
-
-        //return items;
+    private Integer getNewTableViewID() {
+        Integer count = 0;
+        if (tableViewIDCount != 0) count = tableViewIDCount;
+        tableViewIDCount += 1;
+        return count;
     }
 
+    private String getTimestamp() {
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+        Date date = new Date();
+        String time = formatter.format(date);
+        return time;
+    }
+
+    public ObservableList<StorageItem> getStorageItems() {
+        ObservableList<StorageItem> items = FXCollections.observableArrayList();
+
+        items.add(new StorageItem());
+        items.add(new StorageItem(1, "PalettenA", 4, getTimestamp()));
+        return items;
+    }
 }
