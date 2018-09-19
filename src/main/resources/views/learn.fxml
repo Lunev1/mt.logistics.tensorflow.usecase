@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -35,15 +36,6 @@
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                     </rowConstraints>
-                    <children>
-                        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
-                            <columns>
-                                <TableColumn fx:id="idCol" prefWidth="172.0" text="id"/>
-                                <TableColumn fx:id="itemCol" minWidth="0.0" prefWidth="157.0" text="lager"/>
-                                <TableColumn fx:id="amountCol" prefWidth="178.0" text="anzahl"/>
-                            </columns>
-                        </TableView>
-                    </children>
                 </GridPane>
             </items>
         </SplitPane>

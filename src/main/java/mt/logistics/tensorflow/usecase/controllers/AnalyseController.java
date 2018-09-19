@@ -1,16 +1,19 @@
 package mt.logistics.tensorflow.usecase.controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.jfoenix.controls.JFXSpinner;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
+import mt.logistics.tensorflow.usecase.models.LogTextLine;
 import mt.logistics.tensorflow.usecase.models.StorageItem;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class AnalyseController extends MainController {
@@ -25,6 +28,10 @@ public class AnalyseController extends MainController {
     private TableColumn<StorageItem, Integer> amountCol;
     @FXML
     private TableColumn<StorageItem, SimpleDateFormat> dateCol;
+    @FXML
+    private TextArea textArea;
+    @FXML
+    private Button btnRnd;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,13 +40,20 @@ public class AnalyseController extends MainController {
         amountCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        addTableList("Fässer", 5, getTimestamp());
-        addTableList("Container", 2, getTimestamp());
-        addTableList("Paletten", 5, getTimestamp());
+        addTableList("Fässer", 5);
+        addTableList("Container", 40);
+        addTableList("Paletten", 5);
+        addTableList("Säcke", 258);
+
+        textArea.setWrapText(true);
+        textArea.appendText(addTextArea("log1"));
+        textArea.appendText(addTextArea("log2"));
+
+        //jfxSpinner.setRadius(24);
     }
 
-    private void addTableList(String item, Integer amount, String date) {
-        StorageItem addItem = new StorageItem(getNewTableViewID(), item, amount, date);
+    private void addTableList(String item, Integer amount) {
+        StorageItem addItem = new StorageItem(getNewTableViewID(), item, amount, getTimestamp());
         tableView.getItems().add(addItem);
     }
 
@@ -57,11 +71,21 @@ public class AnalyseController extends MainController {
         return time;
     }
 
-    public ObservableList<StorageItem> getStorageItems() {
-        ObservableList<StorageItem> items = FXCollections.observableArrayList();
+    private String addTextArea(String message) {
+        LogTextLine logText = new LogTextLine();
+        String logMessage = logText.createMessage(message);
+        return logMessage;
+    }
 
-        items.add(new StorageItem());
-        items.add(new StorageItem(1, "PalettenA", 4, getTimestamp()));
-        return items;
+    public void handleActionRnd() {
+        Integer i = (int) Math.floor(Math.random() * 101);
+        Integer j = (int) Math.floor(Math.random() * 101);
+        Integer k = (int) Math.floor(Math.random() * 101);
+
+        Integer ijk = i + j + k;
+        textArea.appendText(addTextArea(ijk.toString()));
+
+        addTableList("Säcke", ijk);
+
     }
 }

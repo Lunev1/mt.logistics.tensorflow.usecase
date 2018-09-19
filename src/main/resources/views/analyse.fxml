@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -11,7 +13,7 @@
    <top>
       <Pane prefHeight="80.0" prefWidth="1024.0" style="-fx-background-color: #2D75E8;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnStart" layoutX="910.0" layoutY="10.0" mnemonicParsing="false"
+            <Button fx:id="btnStart" alignment="CENTER_RIGHT" layoutX="910.0" layoutY="10.0" mnemonicParsing="false"
                     onAction="#handleButtonAction" text="Zum Start zurück"/>
             <VBox prefHeight="80.0" prefWidth="200.0">
                <children>
@@ -47,6 +49,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
                </columnResizePolicy>
             </TableView>
+            <JFXTextArea fx:id="textArea"/>
             <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e6e6e6;">
                <children>
                   <Slider layoutX="14.0" layoutY="40.0" prefHeight="20.0" prefWidth="175.0" showTickLabels="true"
@@ -75,10 +78,26 @@
             </Pane>
             <Pane prefHeight="100.0" style="-fx-background-color: #e6e6e6;">
                <children>
-                  <Button layoutX="10.0" layoutY="36.0" mnemonicParsing="false" text="Zurück"/>
-                  <Button layoutX="69.0" layoutY="36.0" mnemonicParsing="false" text="Abspielen"/>
-                  <Button layoutX="146.0" layoutY="36.0" mnemonicParsing="false" text="Vorspulen"/>
-                  <ProgressBar layoutX="10.0" layoutY="5.0" prefHeight="18.0" prefWidth="704.0" progress="0.0"/>
+                  <HBox prefHeight="67.0" prefWidth="451.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="482.0">
+                           <children>
+                              <ProgressBar prefHeight="18.0" prefWidth="446.0" progress="0.0"/>
+                              <Button mnemonicParsing="false" text="Abspielen"/>
+                              <Button fx:id="btnRnd" mnemonicParsing="false" onAction="#handleActionRnd"
+                                      text="rnd log"/>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Text layoutX="451.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:"
+                        wrappingWidth="61.35918571035242"/>
+                  <Text layoutX="459.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font name="System Bold" size="22.0"/>
+                     </font>
+                  </Text>
+                  <JFXSpinner fx:id="jfxSpinner" layoutX="534.0" layoutY="9.0" progress="0.74" radius="50.0"/>
                </children>
             </Pane>
          </children>
